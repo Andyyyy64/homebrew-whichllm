@@ -90,8 +90,8 @@ class Whichllm < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz"
-    sha256 "0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372"
+    url "https://files.pythonhosted.org/packages/80/c4/f5af4c1ca8c1eeb2e92ccca14ce8effdeec651d5ab6053c589b074eda6e1/psutil-7.2.2-cp36-abi3-macosx_11_0_arm64.whl"
+    sha256 "1a7b04c10f32cc88ab39cbf606e117fd74721c831c98a27dc04578deb0c16979"
   end
 
   resource "pydantic" do
@@ -145,7 +145,7 @@ class Whichllm < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.13")
+    virtualenv_create(libexec, "python3.13")
     wheelhouse = buildpath/"wheelhouse"
     wheelhouse.mkpath
     resources.each do |r|
