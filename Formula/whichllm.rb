@@ -10,8 +10,8 @@ class Whichllm < Formula
   depends_on "python@3.13"
 
   def install
-    virtualenv_create(libexec, "python3.13")
-    system libexec/"bin/pip", "install", "--disable-pip-version-check", "whichllm==#{version}"
+    venv = virtualenv_create(libexec, "python3.13")
+    venv.pip_install "whichllm==#{version}"
     bin.install_symlink libexec/"bin/whichllm"
   end
 
