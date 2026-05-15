@@ -90,8 +90,8 @@ class Whichllm < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/d6/f5/97baea3fe7a5a9af7436301f85490905379b1c6f2dd51fe3ecf24b4c5fbf/psutil-7.2.2-cp313-cp313t-macosx_11_0_arm64.whl"
-    sha256 "e78c8603dcd9a04c7364f1a3e670cea95d51ee865e4efb3556a3a63adef958ea"
+    url "https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz"
+    sha256 "0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372"
   end
 
   resource "pydantic" do
@@ -152,7 +152,7 @@ class Whichllm < Formula
       r.fetch
       cp r.cached_download, wheelhouse/File.basename(r.url)
     end
-    pip = ["python3.13", "-m", "pip", "install", "--python=#{libexec}/bin/python",
+    pip = ["python3.13", "-m", "pip", "--python=#{libexec}/bin/python", "install",
            "--no-index", "--no-warn-script-location", "--find-links=#{wheelhouse}"]
     system(*pip, "setuptools", "wheel")
     system(*pip, "--no-build-isolation", "whichllm==#{version}")
