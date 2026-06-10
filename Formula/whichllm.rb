@@ -24,6 +24,13 @@ class Whichllm < Formula
     sha256 "212281cab4dff978f6cedd499cd893e1f620791ca6ff7107cf270781e587eced"
   end
 
+  # wheel>=0.46 requires packaging>=24.0; needed in the offline wheelhouse for the
+  # --no-index bootstrap of setuptools+wheel to resolve.
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl"
+    sha256 "5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e"
+  end
+
   resource "annotated-doc" do
     url "https://files.pythonhosted.org/packages/1e/d3/26bf1008eb3d2daa8ef4cacc7f3bfdc11818d111f7e2d0201bc6e3b49d45/annotated_doc-0.0.4-py3-none-any.whl"
     sha256 "571ac1dc6991c450b25a9c2d84a3705e2ae7a53467b5d111c24fa8baabbed320"
