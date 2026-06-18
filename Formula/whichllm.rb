@@ -7,6 +7,8 @@ class Whichllm < Formula
   sha256 "1df4182f94025645945c2982fe1630805695b693679b3f922d400166422cb858"
   license "MIT"
 
+  preserve_rpath
+
   depends_on "python@3.13"
 
   resource "whichllm-bin" do
