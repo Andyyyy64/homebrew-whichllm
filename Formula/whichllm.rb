@@ -6,10 +6,11 @@ class Whichllm < Formula
   url "https://files.pythonhosted.org/packages/fb/12/218ed735cd6d1a0b45646f338481417d37fc7746a5b36cce755806e031f4/whichllm-0.5.12.tar.gz"
   sha256 "14fb877e702159d175d62595773437eb1969dbc97c366f079f57febb4a19297a"
   license "MIT"
-
-  preserve_rpath
+  revision 1
 
   depends_on "python@3.13"
+
+  preserve_rpath
 
   resource "whichllm-bin" do
     url "https://files.pythonhosted.org/packages/db/70/543f7f010031b8b1865eedb6ede2f6bff0b6bf3f73439bab977be7d7641e/whichllm-0.5.12-py3-none-any.whl"
@@ -24,6 +25,11 @@ class Whichllm < Formula
   resource "wheel" do
     url "https://files.pythonhosted.org/packages/87/1b/9e33c09813d65e248f7f773119148a612516a4bea93e9c6f545f78455b7c/wheel-0.47.0-py3-none-any.whl"
     sha256 "212281cab4dff978f6cedd499cd893e1f620791ca6ff7107cf270781e587eced"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl"
+    sha256 "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
   end
 
   resource "annotated-doc" do
@@ -101,7 +107,7 @@ class Whichllm < Formula
     sha256 "e561593fccf61e8a20fc46dfc2dfe075b8be7d0188df33f221ad1f0139180f9d"
   end
 
-  resource "pydantic_core" do
+  resource "pydantic-core" do
     url "https://files.pythonhosted.org/packages/94/02/abfa0e0bda67faa65fef1c84971c7e45928e108fe24333c81f3bfe35d5f5/pydantic_core-2.41.5-cp313-cp313-macosx_11_0_arm64.whl"
     sha256 "112e305c3314f40c93998e567879e887a3160bb8689ef3d2c04b6cc62c33ac34"
   end
@@ -136,7 +142,7 @@ class Whichllm < Formula
     sha256 "112c1f0ce578bfb4cab9ffdabc68f031416ebcc216536611ba21f04e9aa84c9e"
   end
 
-  resource "typing_extensions" do
+  resource "typing-extensions" do
     url "https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl"
     sha256 "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
   end
