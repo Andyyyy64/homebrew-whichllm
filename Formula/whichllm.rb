@@ -3,8 +3,8 @@ class Whichllm < Formula
 
   desc "Find the best local LLM that actually runs on your hardware"
   homepage "https://github.com/Andyyyy64/whichllm"
-  url "https://files.pythonhosted.org/packages/69/be/864b2b7a30c42b2e81da56e98da662693a94a1cbcf3779b3b54b3095e900/whichllm-0.6.2.tar.gz"
-  sha256 "05d0da728f6a297b35f886e2346a159c9ef55efe1ef68cc73036c539c1d1d0f1"
+  url "https://files.pythonhosted.org/packages/d1/41/11ce7ad0974e47d8a270d1411461dcb57be7415e5699778ca18efe3e3b51/whichllm-0.6.3.tar.gz"
+  sha256 "0ba3808a5301cee69f08469e34b0c368059a25aeb6265f6cf5d44e32ad870b0e"
   license "MIT"
 
   depends_on "python@3.13"
@@ -12,8 +12,8 @@ class Whichllm < Formula
   preserve_rpath
 
   resource "whichllm-bin" do
-    url "https://files.pythonhosted.org/packages/59/cb/c191a40be0a3254cbc76a41f6d5301f2af716e8d6a780e8096e6b1beded0/whichllm-0.6.2-py3-none-any.whl"
-    sha256 "b61710d51fac2474633caeaa5dbc33c5c872d5be131a076570ac433766ec7186"
+    url "https://files.pythonhosted.org/packages/8e/a1/930c98a504e2de8afa55b7f20390dc95b0ced3d01144ccb23295d1e2f5e3/whichllm-0.6.3-py3-none-any.whl"
+    sha256 "35450fd9c70e5f51db40681ed74366195f6a4b9263d504d9fb89eef0ad5ec818"
   end
 
   resource "setuptools" do
