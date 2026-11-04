@@ -156,7 +156,6 @@ class Whichllm < Formula
     wheelhouse = buildpath/"wheelhouse"
     wheelhouse.mkpath
     resources.each do |r|
-      r.fetch
       cp r.cached_download, wheelhouse/File.basename(r.url)
     end
     pip = ["python3.13", "-m", "pip", "--python=#{libexec}/bin/python", "install",
